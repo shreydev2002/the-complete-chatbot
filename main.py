@@ -19,7 +19,7 @@ templates = Jinja2Templates(directory="templates")      #it says that our Jinja2
 chat_responses = []
 @app.get("/", response_class=HTMLResponse)
 async def chat_page(request: Request):
-    chat_responses.clear()  //Clear global chat history
+    chat_responses.clear()  #Clear global chat history
     return templates.TemplateResponse("home.html", {"request": request, "chat_responses": chat_responses})
 
 
